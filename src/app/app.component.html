@@ -1,3 +1,4 @@
+<div class="header">
 <mat-toolbar color="primary" fxLayout="row column" fxLayoutAlign="space-between center">
   <div fxLayout="row column" fxLayoutAlign="center center">
     <img src="assets/icon.png" class="logo">
@@ -5,4 +6,5 @@
   </div>
 </mat-toolbar>
 <app-lp-enter (addLP)=addToList($event)></app-lp-enter>
+</div>
 <app-lp-list [myList]="LPList"></app-lp-list>

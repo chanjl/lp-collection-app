@@ -16,10 +16,12 @@
         </div>
         <span fxFlex></span>
         <div fxLayout="column row" fxLayoutAlign="end end">
-            <span>Rating: {{l.rating}}</span>
             <mat-card-actions>
-                <button class="custombutton" mat-raised-button color="accent">Share</button>
+                <button mat-icon-button>
+                    <mat-icon aria-label="share">share</mat-icon>
+                </button>
             </mat-card-actions>
+            <span>Rating: {{l.rating}}</span>
         </div>
     </mat-card>
 </div>

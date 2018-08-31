@@ -2,3 +2,22 @@
     height: 40px;
     margin-right: 20px;
 }
+
+.header {
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    background-color: white;
+}
+
+app-lp-enter {
+    margin: 1px;        
+}
+
+app-lp-list {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
