@@ -18,7 +18,7 @@
         <div fxLayout="column row" fxLayoutAlign="end end">
             <mat-card-actions>
                 <button mat-icon-button>
-                    <mat-icon aria-label="share">share</mat-icon>
+                    <mat-icon aria-label="share" (click)='share(ind)'>share</mat-icon>
                 </button>
             </mat-card-actions>
             <span>Rating: {{l.rating}}</span>
