@@ -1,0 +1,25 @@
+<div *ngIf="myList.length <=0">
+    <h4>Your LP Collection Is Empty</h4>
+</div>
+<div *ngFor="let l of myList; let ind=index;" margin="10px">
+    <mat-card fxLayout="row" fxLayoutGap="10px">
+        <div fxLayoutGap="start">
+            <img src={{l.image}} class="album_cover">
+        </div>
+        <div>
+            <mat-card-title>
+                {{l.name}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                <span>{{l.artist}}</span>
+            </mat-card-subtitle>
+        </div>
+        <span fxFlex></span>
+        <div fxLayout="column row" fxLayoutAlign="end end">
+            <span>Rating: {{l.rating}}</span>
+            <mat-card-actions>
+                <button class="custombutton" mat-raised-button color="accent">Share</button>
+            </mat-card-actions>
+        </div>
+    </mat-card>
+</div>

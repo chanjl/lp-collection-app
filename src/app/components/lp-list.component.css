@@ -1,0 +1,9 @@
+.album_cover {
+    height: 60px;
+    width: 60px;
+}
+
+mat-card {
+    width: 92%;
+    margin: 20px;
+}

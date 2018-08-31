@@ -1,0 +1,37 @@
+<form #addLPForm="ngForm" (ngSubmit)="toAdd()">
+  <div fxLayout="column row" fxLayoutAlign="space-evenly stretch">
+    <div>
+      <mat-form-field>
+        <input required matInput #nameField="ngModel" name="lp-name" placeholder="Album name" ngModel>
+        <mat-hint *ngIf="!nameField.pristine && nameField.invalid">
+          Please enter an album name
+        </mat-hint>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input required matInput #artistField="ngModel" name="lp-artist" placeholder="Artist" ngModel>
+        <mat-hint *ngIf="!artistField.pristine && artistField.invalid">
+          Please enter an artist name
+        </mat-hint>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-hint>
+        How would you rate the album? (0-10)
+      </mat-hint>
+    </div>
+    <div>
+      <mat-slider #ratingField="ngModel" name="lp-rating" max=10 min=0 thumbLabel ngModel></mat-slider>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput #imageField="ngModel" name="lp-image" placeholder="URL of album cover image" ngModel>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row column" fxLayoutGap="1vw" fxLayoutAlign="space-between">
+      <button mat-raised-button color="accent" type="reset" (click)=clear()>Clear</button>
+      <button mat-raised-button color="accent" type="submit" [disabled]="!addLPForm.valid">Add</button>
+    </div>
+  </div>
+</form>
